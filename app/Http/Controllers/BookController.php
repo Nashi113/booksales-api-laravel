@@ -10,7 +10,11 @@ class BookController extends Controller
     public function index(){
        $books = Book::all();
 
-        return view('books', ['books' => $books]);
+        return response()-> json([
+            "succes" => true,
+            "message" => "Get All Resources",
+            "data" => $books
+        ], 200);
 
     }
 }
