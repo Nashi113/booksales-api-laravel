@@ -17,7 +17,7 @@
         </tr>
         @foreach($books as $item)
         <tr>
-            <td>{{ $item['title'] }}</td>
+            <td>{{ $item['name'] }}</td>
             <td>{{ $item['description'] }}</td>
             <td>{{ $item['price'] }}</td>
             <td>{{ $item['stock'] }}</td>
