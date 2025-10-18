@@ -14,6 +14,9 @@
             <th>Description</th>
             <th>Price</th>
             <th>Stock</th>
+            <th>Cover Image</th>
+            <th>Genre</th>
+            <th>Author</th>
         </tr>
         @foreach($books as $item)
         <tr>
@@ -21,6 +24,9 @@
             <td>{{ $item['description'] }}</td>
             <td>{{ $item['price'] }}</td>
             <td>{{ $item['stock'] }}</td>
+            <td>{{ $item['cover_photo'] }}</td>
+            <td>{{ $item['genre_id'] }}</td>
+            <td>{{ $item['author_id'] }}</td>
         </tr>   
         @endforeach
     </table>
