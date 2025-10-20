@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
+use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,13 +12,12 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::get('/books', [BookController::class, 'index']);
-Route::post('/books', [BookController::class, 'store']);
+
+Route::apiResource('/books', BookController::class);
+
+Route::apiResource('/authors', AuthorController::class);
+
+Route::apiResource('/genres', GenreController::class);
 
 
-Route::get('/genres', [GenreController::class, 'index']);
-Route::post('/genres', [GenreController::class, 'store']);
 
-
-Route::get('/authors', [AuthorController::class, 'index']);
-Route::post('/authors', [AuthorController::class, 'store']);
